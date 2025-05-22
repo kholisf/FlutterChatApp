@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "603091123396",
+    "project_id": "chattapp-22fff",
+    "storage_bucket": "chattapp-22fff.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603091123396:android:25adde6ef1b0b5a7959d91",
+        "android_client_info": {
+          "package_name": "com.tes.chat.aplikasi_chatingan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603091123396-pgv5h34co0v6kpl7bs2vdp112tnamp2g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tes.chat.aplikasi_chatingan",
+            "certificate_hash": "4782d547b6421f3b0524ac06cab5c2e63d9c190b"
+          }
+        },
+        {
+          "client_id": "603091123396-smjjfgo0t9in0eji5jumvpdbj93uo44u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnD-0ICxmPskigxfVmXmb45eumI8QDY7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603091123396-smjjfgo0t9in0eji5jumvpdbj93uo44u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "603091123396-00mifpev1khjs3h8qgnt2pi0sv5hjlps.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tes.chat.chatAplikasi"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603091123396:android:810b85eaf98d5889959d91",
+        "android_client_info": {
+          "package_name": "com.tes.chat.chat_aplikasi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603091123396-smjjfgo0t9in0eji5jumvpdbj93uo44u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnD-0ICxmPskigxfVmXmb45eumI8QDY7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603091123396-smjjfgo0t9in0eji5jumvpdbj93uo44u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "603091123396-00mifpev1khjs3h8qgnt2pi0sv5hjlps.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tes.chat.chatAplikasi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
