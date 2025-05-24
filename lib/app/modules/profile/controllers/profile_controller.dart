@@ -1,10 +1,12 @@
+import 'package:chat_aplikasi/app/controllers/auth_controller.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
+
 
 class ProfileController extends GetxController {
   //TODO: Implement ProfileController
 
   final count = 0.obs;
+  final authC = Get.find<AuthController>();
 late final Map<String,dynamic> dataArgument;
 
 @override
@@ -12,8 +14,7 @@ late final Map<String,dynamic> dataArgument;
     // TODO: implement onInit
 
     super.onInit();
-GetStorage box = GetStorage();
-    dataArgument = box.read("dataUser");
+
   }
   void increment() => count.value++;
 }

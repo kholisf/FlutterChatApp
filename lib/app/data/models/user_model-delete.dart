@@ -1,4 +1,4 @@
-class UserM {
+class UserModelDeleteee {
   String? uid;
   String? name;
   String? email;
@@ -7,8 +7,9 @@ class UserM {
   String? photoUrl;
   String? status;
   String? updatedTime;
+  String? keyName;
 
-  UserM({
+  UserModelDeleteee({
     this.uid,
     this.name,
     this.email,
@@ -17,9 +18,10 @@ class UserM {
     this.photoUrl,
     this.status,
     this.updatedTime,
+    this.keyName,
   });
 
-  UserM.fromJson(Map<String, dynamic> json) {
+  UserModelDeleteee.fromJson(Map<String, dynamic> json) {
     uid = json['uid'];
     name = json['name'];
     email = json['email'];
@@ -28,6 +30,7 @@ class UserM {
     photoUrl = json['photoUrl'];
     status = json['status'];
     updatedTime = json['updatedTime'];
+    keyName = json['keyName'];
   }
 
   Map<String, dynamic> toJson() {
@@ -40,6 +43,7 @@ class UserM {
     data['photoUrl'] = photoUrl;
     data['status'] = status;
     data['updatedTime'] = updatedTime;
+    data['keyName'] = keyName;
     return data;
   }
 }

@@ -61,7 +61,7 @@ final authC = Get.find<AuthController>();
                           borderRadius: BorderRadius.circular(Get.width * 0.4 / 2),
                           color: Colors.transparent,
                           image: DecorationImage(
-                            image: NetworkImage(controller.dataArgument["photoURL"]),
+                            image: NetworkImage(authC.user.value.photoUrl!),  
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -70,11 +70,12 @@ final authC = Get.find<AuthController>();
                   ),
                 ),
           
-                Text(
-                  "Lorem Ipsum",
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                Obx(()=> Text(
+                    "${authC.user.value.name}",
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
                 ),
-                Text("LoremIpsum@gmail.com", style: TextStyle(fontSize: 18)),
+                Text("${authC.user.value.email }", style: TextStyle(fontSize: 18)),
               ],
             ),
           ),

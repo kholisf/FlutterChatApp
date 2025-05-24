@@ -22,6 +22,11 @@ class UpadateStatusView extends GetView<UpadateStatusController> {
         child: Column(
           children: [
             TextField(
+              
+              textInputAction: TextInputAction.done,
+              onEditingComplete: () {
+                controller.authC.updateStatus(controller.statusC.text);
+              },
               controller: controller.statusC,
               decoration: InputDecoration(
                 labelText: 'Status',
@@ -40,7 +45,7 @@ class UpadateStatusView extends GetView<UpadateStatusController> {
               padding: const EdgeInsets.only(top: 20),
               width: Get.width,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {controller.authC.updateStatus(controller.statusC.text);},
 
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red[900],

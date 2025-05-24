@@ -21,7 +21,7 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
             ),
             backgroundColor:Colors.transparent,
             centerTitle: true,
-            actions: [Icon(Icons.save, size: 20, color: Colors.white)],
+            actions: [IconButton(onPressed: ()=> controller.authC.changeProfile(controller.nameC.text, controller.statusC.text), icon: Icon(Icons.save, size: 20, color: Colors.white))],
           ),
         ),
       ),
@@ -52,6 +52,8 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
             ),
             TextField(
               controller: controller.emailC,
+              readOnly: true,
+              textInputAction: TextInputAction.next,
               decoration: InputDecoration(
                 labelText: 'Email',
                 hintText: 'Enter your email here',
@@ -68,6 +70,7 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
             SizedBox(height: 15),
             TextField(
               controller: controller.nameC,
+              textInputAction: TextInputAction.next,  
               decoration: InputDecoration(
                 labelText: 'Name',
                 hintText: 'Enter your name here',
@@ -84,6 +87,11 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
             SizedBox(height: 15),
             TextField(
               controller: controller.statusC,
+              textInputAction: TextInputAction.done,  
+              onEditingComplete: (){
+                
+                controller.authC.changeProfile(controller.nameC.text, controller.statusC.text);
+              },
               decoration: InputDecoration(
                 labelText: 'Status',
                 hintText: 'Enter your status here',
@@ -120,7 +128,10 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
               padding: const EdgeInsets.only(top: 20),
               width: Get.width,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => controller.authC.changeProfile(
+                   controller.nameC.text,
+                   controller.statusC.text,
+                ),
 
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red[900],
@@ -131,7 +142,7 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
                 ),
 
                 child: Text(
-                  "Simpan",
+                  "Update",
                   style: TextStyle(
                     fontSize: 20,
 

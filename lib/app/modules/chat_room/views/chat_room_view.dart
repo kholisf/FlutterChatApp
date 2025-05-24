@@ -42,16 +42,16 @@ class ChatRoomView extends GetView<ChatRoomController> {
               children: [
                 CircleAvatar(
                   backgroundImage:
-                      (Get.arguments == "assets/logo/noimage.png")
-                          ? AssetImage("assets/logo/noimage.png")
-                          : NetworkImage(Get.arguments),
+                      // Get.arguments ??
+                          //  AssetImage("assets/logo/noimage.png")
+                           NetworkImage(Get.arguments["photoUrl"]),
                 ),
                 SizedBox(width: 20),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      "Lorem Ipusm",
+                     Text(
+                      Get.arguments["name"]??"lorem ipsum",
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,

@@ -2,11 +2,11 @@ import 'package:chat_aplikasi/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
+
   HomeView({super.key});
   final List<Widget> myChats =
       List.generate(
@@ -15,10 +15,10 @@ class HomeView extends GetView<HomeController> {
           onTap:
               () => Get.toNamed(
                 Routes.CHAT_ROOM,
-                arguments:
-                    (index + 1 >= 2 && index + 1 <= 13)
-                        ? "https://reqres.in/img/faces/$index-image.jpg"
-                        : "assets/logo/noimage.png",
+                // arguments:
+                //     (index + 1 >= 2 && index + 1 <= 13)
+                //         ? "https://reqres.in/img/faces/$index-image.jpg"
+                //         : "assets/logo/noimage.png",
               ),
           leading: CircleAvatar(
             backgroundImage:
@@ -53,7 +53,7 @@ class HomeView extends GetView<HomeController> {
     // GetStorage box = GetStorage();
 
     // print(box.read("dataUser")["photoURL"]);
-    print(controller.dataArgument["photoURL"]);
+    print(controller.authC.user.value.photoUrl);
 
     return Scaffold(
       body: Column(
@@ -85,7 +85,7 @@ class HomeView extends GetView<HomeController> {
                       tag: "pp",
                       child: CircleAvatar(
                         backgroundImage: NetworkImage(
-                          controller.dataArgument["photoURL"],
+                          controller.authC.user.value.photoUrl!,
                         ),
                         radius: 20,
                       ),
